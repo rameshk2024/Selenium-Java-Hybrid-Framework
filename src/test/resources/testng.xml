@@ -8,15 +8,15 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.seleniumframework.test.LoginPageTest"></class>
+			<class name="com.seleniumframework.test.InventoryDetailsTest"></class>
+			<class name="com.seleniumframework.test.ProductDetailsTest"></class>
+			<class name="com.seleniumframework.test.ShoppingCartTest"></class>
 		</classes>
 	</test>
 	<test name="Selenium Java Hybrid Framework_firefox">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.seleniumframework.test.LoginPageTest"></class>
-			<class name="com.seleniumframework.test.InventoryDetailsTest"></class>
-			<class name="com.seleniumframework.test.ProductDetailsTest"></class>
-			<class name="com.seleniumframework.test.ShoppingCartTest"></class>
 		</classes>
 	</test>
 	<test name="Selenium Java Hybrid Framework_edge">
