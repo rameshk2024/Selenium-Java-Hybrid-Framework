@@ -28,7 +28,7 @@ public class LoginPageTest extends Base {
 	
 	@Test(dataProvider="validLoginData", dataProviderClass = DataProviders.class,description="Verify that user is able to login successfully with valid credentials")
 	public void verifyLoginTest(String username, String password) throws Exception {
-		//ExtentManager.startTest("Valid login test");
+		//ExtentManager.startTest("Valid login test"); -- this is configured in listeners so removed
 		String decryptedUsername = EncryptData.decryptData(username);
 		String decryptedPassword = EncryptData.decryptData(password);
 		ExtentManager.logStep("Enter valid username and password");
