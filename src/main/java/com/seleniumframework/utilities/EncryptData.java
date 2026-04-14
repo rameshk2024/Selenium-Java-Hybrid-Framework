@@ -11,6 +11,7 @@ public class EncryptData {
 	private static final byte[] SECRET_KEY = "SeleniumJava2026".getBytes();
 	private static final String ALGORITHM = "AES";
 	
+	// Method to encrypt data
 	public static String encryptData(String data) throws Exception {
 		SecretKeySpec key = new SecretKeySpec(SECRET_KEY, ALGORITHM);
 		Cipher cipher = Cipher.getInstance(ALGORITHM);
@@ -20,6 +21,7 @@ public class EncryptData {
 
 	}
 
+	// Method to decrypt data
 	public static String decryptData(String data) throws Exception {
 		SecretKeySpec key = new SecretKeySpec(SECRET_KEY, ALGORITHM);
 		Cipher cipher = Cipher.getInstance(ALGORITHM);
