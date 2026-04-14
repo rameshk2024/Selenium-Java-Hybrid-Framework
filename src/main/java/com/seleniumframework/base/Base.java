@@ -110,7 +110,7 @@ public class Base {
 		} else {
 		if (browser.equalsIgnoreCase("chrome")) {
 
-			// Create a map to store Chrome profile preferences
+			//Create a map to store Chrome profile preferences
 			Map<String, Object> prefs = new HashMap<String, Object>();
 			// 1. Disable the "Save Password" prompt
 			prefs.put("credentials_enable_service", false);
