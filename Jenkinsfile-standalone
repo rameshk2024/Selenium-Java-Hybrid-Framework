@@ -1,0 +1,66 @@
+pipeline {
+    agent any  
+
+    tools {
+        maven 'Maven' 
+    }
+    
+    stages {
+		stage('Start Browser Container') {
+            steps {
+                script {
+                    echo "Starting Browser Container with Docker Compose..."
+                    bat "docker compose -f docker-compose-standalone.yml down"
+                    bat "docker compose -f docker-compose-standalone.yml up -d"
+                    echo "Waiting for Selenium Grid to be ready..."
+                    sleep 30 // Add a wait if needed
+                }
+            }
+        }
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/rameshk2024/Selenium-Java-Hybrid-Framework.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                bat 'mvn clean install -DseleniumGrid=false'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat "mvn clean test -DseleniumGrid=false"
+            }
+        }
+        
+        stage('Stop browser container') {
+            steps {
+                script {
+                    echo "Stopping Browser Container..."
+                    bat "docker compose -f docker-compose-standalone.yml down"
+                }
+            }
+        }
+
+        stage('Reports') {
+            steps {
+                publishHTML(target: [
+                    reportDir: 'src/test/resources/ExtentReport',  
+                    reportFiles: 'ExtentReport.html',  
+                    reportName: 'Selenium Java Hybrid Automation Test Report'
+                ])
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: '**/src/test/resources/ExtentReport/*.html', fingerprint: true
+            junit 'target/surefire-reports/*.xml'
+        }
+        
+    }
+}

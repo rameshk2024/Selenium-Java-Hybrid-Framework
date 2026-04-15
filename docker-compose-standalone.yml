@@ -1,0 +1,9 @@
+# version key is obsolete in newer Docker Compose — safe to remove
+services:
+  selenium:
+    image: selenium/standalone-chrome:4.41.0
+	container_name: selenium-standalone
+    shm_size: 2gb
+	ports:
+	      - "4442:4442"
+		  - "4443:4443"
