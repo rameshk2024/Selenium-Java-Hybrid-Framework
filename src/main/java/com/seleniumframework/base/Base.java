@@ -49,7 +49,7 @@ public class Base {
 
 	@BeforeMethod
 	@Parameters("browser")
-	public synchronized void setup(String browser) throws IOException {
+	public synchronized void setup(@Optional String browser) throws IOException {
 		System.out.println("Setting webDrvier for: " + this.getClass().getSimpleName());
 		launchBrowser(browser);
 		configureBrowser();
