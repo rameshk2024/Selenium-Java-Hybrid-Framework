@@ -1,4 +1,9 @@
 services:
+  test-runner:
+    build: .
+	volumes:
+	  - .:/app
+	working_dir: /app
   selenium:
     image: selenium/standalone-chrome:4.41.0
     container_name: selenium-standalone

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Selenium Java Hybrid Framework - standalone">
+<suite name="Selenium Java Hybrid Framework">
 	<listeners>
 		<listener class-name="com.seleniumframework.listeners.TestListener"></listener>
 	</listeners>

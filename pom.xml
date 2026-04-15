@@ -104,7 +104,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<!-- Specify the location of your testng.xml file-->
-							<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+							<suiteXmlFile>src/test/resources/${suiteXmlFile}</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
