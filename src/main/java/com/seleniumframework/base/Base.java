@@ -108,6 +108,7 @@ public class Base {
 			throw new RuntimeException("Invalid Grid URL", e);
 		} 
 		} else {
+			browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			//Create a map to store Chrome profile preferences
