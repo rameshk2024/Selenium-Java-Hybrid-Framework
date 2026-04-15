@@ -23,6 +23,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
@@ -79,7 +80,7 @@ public class Base {
 	}
 
 	// Initialize webdriver based on browser defined in the config file
-	private synchronized void launchBrowser(String browser) {
+	private synchronized void launchBrowser(@Optional String browser) {
 		//String browser = prop.getProperty("browser");
 		
 		boolean seleniumGrid = Boolean.parseBoolean(prop.getProperty("SeleniumGrid"));
