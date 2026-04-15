@@ -105,6 +105,7 @@
 						<suiteXmlFiles>
 							<!-- Specify the location of your testng.xml file-->
 							<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+							<suiteXmlFile>src/test/resources/testng-standalone.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
