@@ -24,15 +24,9 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build & Test') {
             steps {
                 bat 'mvn clean install -DsuiteXmlFile=testng-standalone.xml -DskipTests=false'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat "mvn test -DsuiteXmlFile=testng-standalone.xml"
             }
         }
         
