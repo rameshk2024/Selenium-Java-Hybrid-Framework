@@ -31,13 +31,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean install -DseleniumGrid=true'
+                bat 'mvn clean install -DseleniumGrid=true -DsuiteXmlFile=testng.xml'
             }
         }
 
         stage('Test') {
             steps {
-                bat "mvn clean test -DseleniumGrid=true"
+                bat "mvn clean test -DseleniumGrid=true -DsuiteXmlFile=testng.xml"
             }
         }
         
