@@ -108,8 +108,8 @@ public class Base {
 		} catch(MalformedURLException e) {
 			throw new RuntimeException("Invalid Grid URL", e);
 		} 
-		} else {
-			browser = prop.getProperty("browser");
+		} else { // If seleniumGrid parameter in property file is false
+			browser = prop.getProperty("browser"); // browser value will be taken from properties file
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			//Create a map to store Chrome profile preferences
