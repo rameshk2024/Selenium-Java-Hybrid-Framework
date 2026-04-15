@@ -33,11 +33,11 @@ public class InventoryDetailsTest extends Base {
 		String productName = inventoryPage.getProductName();
 		ExtentManager.logStep("Product Name: " + productName);
 		String expectedProductName = prop.getProperty("productName");
-		//assertEquals(productName,expectedProductName);
+		assertEquals(productName,expectedProductName);
 		
 		Boolean isAddToCartButtonDisplayed = inventoryPage.isAddToCartButtonDisplayed();
 		ExtentManager.logStep("IS Add to Cart button displayed: " + isAddToCartButtonDisplayed);
-		//assert(isAddToCartButtonDisplayed);
+		assert(isAddToCartButtonDisplayed);
 		
 		String priceOnInventory = inventoryPage.getProductPrice();
 		ExtentManager.logStep("Product price on inventory: " + priceOnInventory);

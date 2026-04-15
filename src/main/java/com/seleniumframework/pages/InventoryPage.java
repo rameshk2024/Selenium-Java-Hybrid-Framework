@@ -13,10 +13,10 @@ public class InventoryPage {
 
 	private By addToCartButton = By.id("add-to-cart-sauce-labs-backpack");
 	private By productPrice = By.xpath("//*[@id='inventory_container']/div/div[1]/div[2]/div[2]/div");
-	private By productName = By.xpath("//a[@id=\"item_4_title_link\"]");
-	private By sauceDemoLogo = By.xpath("//div[@class=\"app_logo\"]");
-	private By mainMenu = By.xpath("//div[@class=\"bm-burger-button\"]");
-	private By logoutButton = By.xpath("//a[contains(text(), \"Logout\")]");
+	private By productName = By.xpath("//a[@id='item_4_title_link']/div");
+	private By sauceDemoLogo = By.xpath("//div[@class='app_logo']");
+	private By mainMenu = By.xpath("//div[@class='bm-burger-button']");
+	private By logoutButton = By.xpath("//a[contains(text(), 'Logout')]");
 
 	// Constructor to initialize action driver object
 	public InventoryPage(WebDriver driver) {

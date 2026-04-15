@@ -53,11 +53,11 @@ public class ShoppingCartTest extends Base {
 
 		String productNameOnCart = shoppingCartPage.getProductName();
 		ExtentManager.logStep("Product Name on Shopping Cart: " + productNameOnCart);
-//		Assert.assertEquals(productNameOnProductDetails, productNameOnCart,
-//				prop.getProperty("productNameMissmatchError"));
+		Assert.assertEquals(productNameOnProductDetails, productNameOnCart,
+				prop.getProperty("productNameMissmatchError"));
 		String ProductPriceOnCart = shoppingCartPage.getProductPrice();
 		ExtentManager.logStep("Product Price on Shopping Cart: " + ProductPriceOnCart);
-		//Assert.assertEquals(priceOnProductDetails, ProductPriceOnCart, prop.getProperty("priceMissmatchError"));
+		Assert.assertEquals(priceOnProductDetails, ProductPriceOnCart, prop.getProperty("priceMissmatchError"));
 		ExtentManager.logStep("=======================================================================");
 
 	}

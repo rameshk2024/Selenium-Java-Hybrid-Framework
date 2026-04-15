@@ -50,10 +50,10 @@ public class ProductDetailsTest extends Base{
 		
 		String productNameOnProductDetails = productDetailsPage.getProductName();
 		ExtentManager.logStep("Product name on Product Details : " + productNameOnProductDetails);
-		//Assert.assertEquals(nameOnInventory, productNameOnProductDetails, prop.getProperty("productNameMissmatchError"));
+		Assert.assertEquals(nameOnInventory, productNameOnProductDetails, prop.getProperty("productNameMissmatchError"));
 		String priceOnProductDetails = productDetailsPage.getProductPrice();
 		ExtentManager.logStep("Product price on Product Details: " + priceOnProductDetails);
-		//Assert.assertEquals(priceOnInventory, priceOnProductDetails, prop.getProperty("priceMissmatchError"));
+		Assert.assertEquals(priceOnInventory, priceOnProductDetails, prop.getProperty("priceMissmatchError"));
 		String addToCartText =productDetailsPage.getAddToCartButtonText();
 		ExtentManager.logStep("Add To Cart Button Text: " + addToCartText);
 		productDetailsPage.clickAddToCartButton();
