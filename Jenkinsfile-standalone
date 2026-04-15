@@ -50,7 +50,10 @@ pipeline {
                 publishHTML(target: [
                     reportDir: 'src/test/resources/ExtentReport',  
                     reportFiles: 'ExtentReport.html',  
-                    reportName: 'Selenium Java Hybrid Automation Test Report'
+                    reportName: 'Selenium Java Hybrid Automation Test Report',
+                    keepAll: true,
+            		allowMissing: false,
+            		alwaysLinkToLastBuild: true
                 ])
             }
         }
