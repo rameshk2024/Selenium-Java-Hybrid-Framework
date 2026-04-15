@@ -4,5 +4,5 @@ services:
     container_name: selenium-standalone
     shm_size: 2gb
     ports:
-      - "4442:4442"
-      - "4443:4443"
+      - "4445:4445"
+      - "4446:4446"
