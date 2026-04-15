@@ -26,7 +26,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean install -DsuiteXmlFile=testng-standalone.xml'
+                bat 'mvn clean install -DsuiteXmlFile=testng-standalone.xml -DskipTests=false'
             }
         }
 
